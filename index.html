@@ -142,6 +142,7 @@
     backdrop-filter: blur(10px);
     border: 1px solid var(--line);
     box-shadow: 0 8px 24px -16px var(--shadow-strong);
+    overflow: hidden;
   }
   .brand {
     display: flex;
@@ -149,6 +150,7 @@
     gap: 10px;
     font-weight: 800;
     font-size: 1.05rem;
+    min-width: 0;
   }
   .brand .mark {
     width: 34px;
@@ -161,6 +163,18 @@
     flex-shrink: 0;
   }
   .brand .mark svg { width: 19px; height: 19px; }
+  .brand .brand-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .brand .brand-short { display: none; }
+  @media (max-width: 480px) {
+    .brand .brand-full { display: none; }
+    .brand .brand-short { display: inline; }
+    .navbar { padding: 0 14px; gap: 10px; }
+    .navbar .btn-primary { padding: 11px 16px; font-size: 0.86rem; }
+  }
   .navlinks {
     display: flex;
     gap: 26px;
@@ -514,7 +528,8 @@
       <span class="mark">
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff8f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1.5l1-4.5A2 2 0 0 1 7.4 11h9.2a2 2 0 0 1 1.9 1.5l1 4.5H21"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 13V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/></svg>
       </span>
-      <span>Gestor de Pátio e Catálogo para revendas</span>
+      <span class="brand-text brand-full">Gestor de Pátio e Catálogo para revendas</span>
+      <span class="brand-text brand-short">Gestor de Pátio</span>
     </div>
     <div class="navlinks">
       <a href="#solucao">Como funciona</a>
