@@ -36,12 +36,12 @@
   }
 
   :root {
-    --bg: #f6f7f9;
+    --bg: #ffffff;
     --bg-card: #ffffff;
-    --bg-sunk: #eef0f3;
+    --bg-sunk: #f7f7f9;
     --ink: #12151a;
     --ink-soft: #5b6472;
-    --line: #e6e8ec;
+    --line: #e7e7eb;
     --orange-1: #fd6d2c;
     --orange-2: #fc3f05;
     --orange-tint: #fff1e9;
@@ -80,12 +80,12 @@
     --shadow-strong: rgba(0, 0, 0, 0.55);
   }
   :root[data-theme="light"] {
-    --bg: #f6f7f9;
+    --bg: #ffffff;
     --bg-card: #ffffff;
-    --bg-sunk: #eef0f3;
+    --bg-sunk: #f7f7f9;
     --ink: #12151a;
     --ink-soft: #5b6472;
-    --line: #e6e8ec;
+    --line: #e7e7eb;
     --orange-1: #fd6d2c;
     --orange-2: #fc3f05;
     --orange-tint: #fff1e9;
@@ -126,7 +126,10 @@
     position: sticky;
     top: 0;
     z-index: 20;
-    padding-top: 16px;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
   }
   .navbar {
     max-width: 1120px;
@@ -135,14 +138,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    height: 64px;
-    padding: 0 20px;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--bg-card) 82%, transparent);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--line);
-    box-shadow: 0 8px 24px -16px var(--shadow-strong);
-    overflow: hidden;
+    height: 68px;
   }
   .brand {
     display: flex;
@@ -189,29 +185,34 @@
   .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     border: none;
-    border-radius: 999px;
-    padding: 13px 24px;
+    border-radius: 10px;
+    min-height: 48px;
+    padding: 0 24px;
     font-size: 0.93rem;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
     font-family: inherit;
+    transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease;
   }
   .btn-primary {
-    background: linear-gradient(135deg, var(--orange-1), var(--orange-2));
+    background: var(--orange-2);
     color: #fff8f4;
     box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--orange-2) 70%, transparent);
   }
-  .btn-primary:hover { filter: brightness(1.05); }
+  .btn-primary:hover { background: color-mix(in srgb, var(--orange-2) 82%, black); transform: translateY(-2px); box-shadow: 0 14px 28px -10px color-mix(in srgb, var(--orange-2) 55%, transparent); }
+  .btn-primary:active { transform: scale(0.97); }
   .btn-ghost {
     background: var(--bg-card);
     color: var(--ink);
     border: 1px solid var(--line);
   }
-  .btn-ghost:hover { border-color: var(--orange-2); color: var(--orange-2); }
+  .btn-ghost:hover { border-color: var(--orange-2); color: var(--orange-2); transform: translateY(-2px); }
+  .btn-ghost:active { transform: scale(0.97); }
   .btn:focus-visible, a:focus-visible, summary:focus-visible {
     outline: 2px solid var(--orange-2);
     outline-offset: 2px;
@@ -263,7 +264,7 @@
     gap: 26px;
     background: var(--bg-card);
     border: 1px solid var(--line);
-    border-radius: 24px;
+    border-radius: 16px;
     padding: 30px 32px;
     box-shadow: 0 24px 48px -32px var(--shadow-strong);
   }
@@ -288,15 +289,17 @@
   }
 
   /* ---------- section shell ---------- */
-  section { padding: 80px 0; }
+  section { padding: clamp(56px, 9vw, 96px) 0; border-top: 1px solid var(--line); }
+  main > section:first-child { border-top: none; }
+  main > section:nth-of-type(even) { background: var(--bg-sunk); }
   .section-head { max-width: 62ch; margin-bottom: 46px; }
   .kicker {
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--orange-2);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   h2.section-title { font-size: clamp(1.6rem, 3vw, 2.15rem); margin: 0 0 12px; letter-spacing: -0.01em; }
   .section-lede { color: var(--ink-soft); font-size: 1.04rem; }
@@ -307,10 +310,12 @@
   .problem-card {
     border: 1px solid var(--line);
     background: var(--bg-card);
-    border-radius: 20px;
+    border-radius: 14px;
     padding: 28px;
     box-shadow: 0 16px 32px -28px var(--shadow-strong);
+    transition: transform .2s ease, border-color .2s ease;
   }
+  .problem-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--orange-2) 45%, var(--line)); }
   .icon-badge {
     width: 46px;
     height: 46px;
@@ -332,9 +337,11 @@
     padding: 32px 30px;
     background: var(--bg-card);
     border: 1px solid var(--line);
-    border-radius: 22px;
+    border-radius: 14px;
     box-shadow: 0 16px 32px -28px var(--shadow-strong);
+    transition: transform .2s ease, border-color .2s ease;
   }
+  .flow-col:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--orange-2) 45%, var(--line)); }
   .flow-col .who {
     display: inline-block;
     font-size: 0.76rem;
@@ -360,7 +367,7 @@
 
   /* ---------- ROI band ---------- */
   .roi {
-    border-radius: 24px;
+    border-radius: 16px;
     padding: 40px 40px;
     background: linear-gradient(135deg, color-mix(in srgb, var(--orange-1) 10%, var(--bg-card)), var(--bg-card));
     border: 1px solid var(--orange-tint-line);
@@ -392,14 +399,16 @@
 
   .price-card {
     border: 1px solid var(--line);
-    border-radius: 22px;
+    border-radius: 14px;
     background: var(--bg-card);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 16px 32px -28px var(--shadow-strong);
     position: relative;
+    transition: transform .2s ease, border-color .2s ease;
   }
+  .price-card:hover { transform: translateY(-3px); }
   .price-card.popular { border-color: var(--orange-2); box-shadow: 0 20px 40px -24px color-mix(in srgb, var(--orange-2) 40%, transparent); }
   .price-card.popular::before {
     content: "";
@@ -459,7 +468,7 @@
   .enterprise-card {
     margin-top: 18px;
     border: 1px solid var(--line);
-    border-radius: 22px;
+    border-radius: 14px;
     background: var(--bg-sunk);
     padding: 28px 32px;
     display: flex;
@@ -501,7 +510,7 @@
   /* ---------- final cta ---------- */
   .final-cta-panel {
     text-align: center;
-    border-radius: 28px;
+    border-radius: 16px;
     padding: 64px 32px;
     background: linear-gradient(135deg, var(--orange-1), var(--orange-2));
     color: #fff8f4;
