@@ -1,7 +1,14 @@
-# Gestor de Pátio e Catálogo — site
+# Gestor de Pátio — site
 
-Landing page estática (`index.html` + `favicon.svg`), pronta para publicar no
-GitHub Pages.
+Landing page estática, pronta para publicar no GitHub Pages. A identidade visual
+segue o guia disponível em `assets/`: fundo grafite, verde principal e neon,
+tipografia Inter e a assinatura “Automação que vende”.
+
+## Estrutura
+
+- `index.html`: página, estilos e interações;
+- `favicon.svg`: símbolo da marca em formato vetorial;
+- `assets/`: materiais de identidade e imagem de compartilhamento.
 
 ## Publicar pela primeira vez
 
@@ -47,12 +54,6 @@ git push
 
 As mudanças ficam no ar em alguns minutos.
 
-## Pendências conhecidas
+## Observação
 
-- `og:url` e `canonical` em `index.html` estão com o placeholder
-  `SEU-DOMINIO-AQUI` — atualize para a URL final assim que o domínio ou a
-  URL do GitHub Pages estiver definida.
-- Não há imagem de pré-visualização (`og:image`) para compartilhamento em
-  redes sociais/WhatsApp ainda; pode ser adicionada depois.
-- Sem analytics/rastreamento de conversão configurado, por escolha do
-  cliente nesta fase.
+Não há analytics ou rastreamento de conversão configurado nesta fase.
