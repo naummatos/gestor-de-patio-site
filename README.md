@@ -1,4 +1,4 @@
-# Gestor de Pátio — site
+# Gestor de Pátio e Catálogo — site
 
 Landing page estática, pronta para publicar no GitHub Pages. A identidade visual
 segue o guia disponível em `assets/`: fundo grafite, verde principal e neon,
