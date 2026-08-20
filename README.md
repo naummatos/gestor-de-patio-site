@@ -9,6 +9,7 @@ tipografia Inter e a assinatura “Automação que vende”.
 - `index.html`: página, estilos e interações;
 - `favicon.svg`: símbolo da marca em formato vetorial;
 - `assets/`: materiais de identidade e imagem de compartilhamento.
+- `media/`: vídeos demonstrativos usados pela página.
 
 ## Publicar pela primeira vez
 
