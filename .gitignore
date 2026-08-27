@@ -1,4 +1,4 @@
 .env
 .env.*
 !.env.example
-material_grafico/
+material_grafico/remotion/node_modules/

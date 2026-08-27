@@ -1,0 +1,24 @@
+{
+  "name": "gestor-de-patio-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render:vendedor": "remotion render src/index.ts Vendedor output/01-vendedor-cadastra.mp4",
+    "render:gerente": "remotion render src/index.ts Gerente output/02-gerente-controla.mp4",
+    "render:cliente": "remotion render src/index.ts Cliente output/03-cliente-encontra.mp4",
+    "render:material-video": "remotion render src/index.ts MaterialVideo output/04-material-grafico-video.mp4",
+    "render:serie": "remotion render src/index.ts SerieCompleta output/00-serie-completa.mp4",
+    "render:all": "npm run render:vendedor && npm run render:gerente && npm run render:cliente && npm run render:serie"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.514",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.514"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.10",
+    "typescript": "5.9.2"
+  }
+}
