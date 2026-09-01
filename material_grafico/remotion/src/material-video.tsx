@@ -11,8 +11,8 @@ const PedidoNoGrupo: React.FC = () => {
       <div style={{display: 'flex', alignItems: 'center', gap: 18}}>
         <div style={{display: 'grid', width: 64, height: 64, placeItems: 'center', borderRadius: 18, color: '#061008', background: colors.green, fontSize: 31, fontWeight: 950}}>G</div>
         <div>
-          <div style={{fontSize: 29, fontWeight: 900}}>Gestor de Pátio e Catálogo</div>
-          <div style={{marginTop: 3, color: colors.muted, fontSize: 21}}>Criação de vídeo pelo WhatsApp</div>
+          <div style={{fontSize: 38, fontWeight: 900}}>Gestor de Pátio e Catálogo</div>
+          <div style={{marginTop: 4, color: colors.muted, fontSize: 30}}>Criação de vídeo pelo WhatsApp</div>
         </div>
       </div>
 
@@ -21,8 +21,8 @@ const PedidoNoGrupo: React.FC = () => {
           <div style={{color: colors.muted, fontSize: 39}}>‹</div>
           <div style={{display: 'grid', width: 64, height: 64, placeItems: 'center', borderRadius: '50%', color: '#061008', background: colors.green, fontSize: 30, fontWeight: 950}}>G</div>
           <div style={{flex: 1}}>
-            <div style={{fontSize: 35, fontWeight: 900}}>Grupo da Loja</div>
-            <div style={{marginTop: 3, color: '#a9bcae', fontSize: 23}}>Equipe • operação interna</div>
+            <div style={{fontSize: 42, fontWeight: 900}}>Grupo da Loja</div>
+            <div style={{marginTop: 4, color: '#a9bcae', fontSize: 30}}>Equipe • operação interna</div>
           </div>
           <div style={{fontSize: 32, letterSpacing: 6}}>•••</div>
         </div>
@@ -41,8 +41,8 @@ const PedidoNoGrupo: React.FC = () => {
       </div>
 
       <div style={{marginTop: 46, textAlign: 'center'}}>
-        <div style={{fontSize: 55, fontWeight: 950, letterSpacing: -2.4, lineHeight: 1.04}}>Pediu no grupo. <Accent>Recebeu pronto.</Accent></div>
-        <div style={{marginTop: 17, color: colors.muted, fontSize: 27}}>O assistente usa as fotos e os dados já cadastrados.</div>
+        <div style={{fontSize: 60, fontWeight: 950, letterSpacing: -2.4, lineHeight: 1.04}}>Pediu no grupo. <Accent>Recebeu pronto.</Accent></div>
+        <div style={{marginTop: 18, color: colors.muted, fontSize: 35}}>O assistente usa as fotos e os dados já cadastrados.</div>
       </div>
     </AbsoluteFill>
   );
