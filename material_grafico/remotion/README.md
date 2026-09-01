@@ -7,7 +7,7 @@ Vídeos verticais que simulam o uso do Gestor de Pátio e Catálogo por vendedor
 - `Vendedor` — jornada de 30 segundos: cadastro por placa, atualização dos canais e veículo encontrado pelo atendimento público.
 - `Gerente` — consulta textual de ranking e resumo de vendas por vendedor.
 - `Cliente` — jornada de 18 segundos: conversa textual, continuidade pelo contexto e envio do vídeo do veículo pelo assistente.
-- `MaterialVideo` — jornada de 30 segundos: pedido no grupo, confirmação do assistente e demonstração de um anúncio vertical com a identidade do Gestor de Pátio e Catálogo.
+- `MaterialVideo` — jornada de cerca de 39 segundos: pedido no grupo, confirmação do assistente e demonstração, em tela inteira, de um anúncio vertical gerado pelo template atual do produto.
 - `SerieCompleta` — sequência com as três jornadas.
 
 Todos os vídeos têm 1080 × 1920 px, 30 fps e não usam pessoas, mãos, silhuetas ou a palavra “lead”.
