@@ -2,5 +2,4 @@
 .env.*
 !.env.example
 material_grafico/remotion/node_modules/
-apresentacao_comercial/node_modules/
-apresentacao_comercial/revisao/
+apresentacao_comercial
