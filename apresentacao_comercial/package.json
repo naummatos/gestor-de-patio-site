@@ -1,0 +1,13 @@
+{
+  "name": "apresentacao-comercial-gestor-de-patio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node gerar-apresentacao.mjs",
+    "variants": "node ajustar-variantes.mjs"
+  },
+  "dependencies": {
+    "jszip": "3.10.1",
+    "pptxgenjs": "3.12.0"
+  }
+}
